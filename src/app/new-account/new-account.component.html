@@ -1,0 +1,36 @@
+
+    <div class="form-group">
+      <label>Account Name</label>
+      <input
+        type="text"
+        class="form-control"
+        #accountName>
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input
+        type="text"
+        class="form-control"
+        #accountEmail>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input
+        type="text"
+        class="form-control"
+        #accountPassword>
+    </div>
+    <div class="form-group">
+        <label>Status</label>
+      <select class="form-control" #status>
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+        <option value="hidden">Hidden</option>
+      </select>
+    </div>
+    <button
+      class="btn btn-primary"
+      (click)="onCreateAccount(accountName.value,accountEmail.value,accountPassword.value, status.value)">
+      Add Account
+    </button>
+ 
